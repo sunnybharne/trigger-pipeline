@@ -1,0 +1,21 @@
+name: trigger-pipeline-resource-name
+
+pool: selfHosted
+
+trigger:
+  branches:
+    include:
+      - main
+
+stages:
+- stage: stage-name
+  jobs:
+  - job: job-name
+    steps:
+    - checkout: self
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo "triggered pipeline"
+
