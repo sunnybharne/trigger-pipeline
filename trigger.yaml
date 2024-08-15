@@ -18,7 +18,7 @@ stages:
         script: |
           echo "triggered pipeline"
 
-- stage: Prod
+- stage: Production
   jobs:
   - job: job_name
     steps:
@@ -27,4 +27,3 @@ stages:
         targetType: 'inline'
         script: |
           echo "triggered pipeline"
-
