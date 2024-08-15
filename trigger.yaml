@@ -8,9 +8,9 @@ trigger:
       - main
 
 stages:
-- stage: stage-name
+- stage: stage_name
   jobs:
-  - job: job-name
+  - job: job_name
     steps:
     - checkout: self
     - task: Bash@3
