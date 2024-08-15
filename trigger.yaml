@@ -18,9 +18,10 @@ stages:
         script: |
           echo "triggered pipeline"
 
+
 - stage: Production
   jobs:
-  - job: job_name
+  - job: jdob_name
     steps:
     - task: Bash@3
       inputs:
