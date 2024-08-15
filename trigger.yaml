@@ -12,7 +12,16 @@ stages:
   jobs:
   - job: job_name
     steps:
-    - checkout: self
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo "triggered pipeline"
+
+- stage: Production
+  jobs:
+  - job: job_name
+    steps:
     - task: Bash@3
       inputs:
         targetType: 'inline'
